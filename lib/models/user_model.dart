@@ -51,5 +51,23 @@ class User {
     "updated_at": updatedAt?.toIso8601String(),
   };
 
-  copyWith({required String name, required String phone}) {}
+  User copyWith({
+    int? id,
+    String? name,
+    String? email,
+    dynamic emailVerifiedAt,
+    String? role,
+    DateTime? createdAt,
+    DateTime? updatedAt,
+  }) {
+    return User(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      email: email ?? this.email,
+      emailVerifiedAt: emailVerifiedAt ?? this.emailVerifiedAt,
+      role: role ?? this.role,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+    );
+  }
 }

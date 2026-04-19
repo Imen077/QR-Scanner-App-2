@@ -12,7 +12,8 @@ class TicketTile extends StatelessWidget {
     final String eventName = ticket?['event_name'] ?? 'Event Name';
     final String eventDate = ticket?['event_date'] ?? '2080-80-90';
     final String status = ticket?['status'] ?? 'active';
-    final String eventLocation = ticket?['event_location'] ?? 'Jakarta, Indonesia';
+    final String eventLocation =
+        ticket?['event_location'] ?? 'Jakarta, Indonesia';
     final String seatNumber = ticket?['seat_number'] ?? 'A-01';
 
     final Color statusColor = _statusColor(status);
@@ -37,11 +38,17 @@ class TicketTile extends StatelessWidget {
         width: 40,
         height: 40,
         decoration: BoxDecoration(
+          // ignore: deprecated_member_use
           color: statusColor.withOpacity(0.1),
           borderRadius: BorderRadius.circular(10),
+          // ignore: deprecated_member_use
           border: Border.all(color: statusColor.withOpacity(0.3)),
         ),
-        child: Icon(Icons.confirmation_num_outlined, color: statusColor, size: 20),
+        child: Icon(
+          Icons.confirmation_num_outlined,
+          color: statusColor,
+          size: 20,
+        ),
       ),
       title: Text(eventName),
       titleTextStyle: Theme.of(context).textTheme.titleMedium,

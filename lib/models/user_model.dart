@@ -41,6 +41,10 @@ class User {
         : DateTime.parse(json["updated_at"]),
   );
 
+  get phone => null;
+
+  get avatar => null;
+
   Map<String, dynamic> toJson() => {
     "id": id,
     "name": name,
@@ -58,7 +62,7 @@ class User {
     dynamic emailVerifiedAt,
     String? role,
     DateTime? createdAt,
-    DateTime? updatedAt,
+    DateTime? updatedAt, required String phone,
   }) {
     return User(
       id: id ?? this.id,

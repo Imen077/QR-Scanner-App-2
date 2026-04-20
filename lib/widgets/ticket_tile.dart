@@ -61,6 +61,7 @@ class TicketTile extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
             decoration: BoxDecoration(
+              // ignore: deprecated_member_use
               color: statusColor.withOpacity(0.12),
               borderRadius: BorderRadius.circular(8),
             ),

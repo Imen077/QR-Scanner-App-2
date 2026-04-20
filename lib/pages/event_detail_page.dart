@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ikutan/services/auth_services.dart';
@@ -65,7 +67,7 @@ class EventDetailPage extends StatelessWidget {
                   Image.network(
                     eventImage,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => Container(
+                    errorBuilder: (_, _, _) => Container(
                       color: const Color(0xFF1A2A1A),
                       child: const Icon(Icons.event, size: 64, color: _accents),
                     ),

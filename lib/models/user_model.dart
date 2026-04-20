@@ -41,9 +41,9 @@ class User {
         : DateTime.parse(json["updated_at"]),
   );
 
-  get phone => null;
+  Null get phone => null;
 
-  get avatar => null;
+  Null get avatar => null;
 
   Map<String, dynamic> toJson() => {
     "id": id,

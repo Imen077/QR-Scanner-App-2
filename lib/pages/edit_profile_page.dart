@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ikutan/controllers/profile_controller.dart';
@@ -73,6 +75,7 @@ class EditProfilePage extends StatelessWidget {
             Obx(() {
               final hasPicked = _ctrl.pickedImage.value != null;
               final hasNetwork =
+                  // ignore: dead_code
                   _authServices.user.value?.avatar?.isNotEmpty == true;
               if (!hasPicked && !hasNetwork) return const SizedBox.shrink();
               return _sourceTile(
@@ -222,7 +225,7 @@ class EditProfilePage extends StatelessWidget {
                                     ? Image.network(
                                         avatarUrl,
                                         fit: BoxFit.cover,
-                                        errorBuilder: (_, __, ___) =>
+                                        errorBuilder: (_, _, _) =>
                                             _avatarInitials(userName),
                                       )
                                     : _avatarInitials(userName),
